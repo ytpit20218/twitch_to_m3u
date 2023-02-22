@@ -36,4 +36,6 @@ jobs:
       - name: Set runner IP
         shell: powershell
         run: Set-Item -Path Env:RUNNER_IP -Value $env:RUNNER_IP
-    
+        run: Get IP
+        shell: powershell
+        run: Write-Host "IP address: $env:RUNNER_IP"
