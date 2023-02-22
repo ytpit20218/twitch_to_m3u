@@ -1,0 +1,4 @@
+- name: Show IP address
+  run: |
+    ip addr show eth0
+    echo "Runner IP: ${{ runner.ip }}"
