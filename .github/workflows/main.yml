@@ -31,7 +31,11 @@ jobs:
       #  run: echo testing!
 
       # Runs a set of commands using the runners shell 
+      - name: config
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
       - name: Show IP address
-  run: |
-    ip addr show eth0
-    echo "Runner IP: ${{ runner.ip }}"
+        run: |
+          ip addr show eth0
+          echo "Runner IP: ${{ runner.ip }}"
