@@ -33,4 +33,7 @@ jobs:
       # Runs a set of commands using the runners shell 
       - name: Check NetAdapter
         run: Get-NetAdapter
-          
+      - name: Set runner IP
+        shell: powershell
+        run: Set-Item -Path Env:RUNNER_IP -Value $env:RUNNER_IP
+    
