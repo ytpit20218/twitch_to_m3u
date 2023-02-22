@@ -31,5 +31,6 @@ jobs:
       #  run: echo testing!
 
       # Runs a set of commands using the runners shell 
-      - name: Check IP
-        run: Write-Host "IP address: $env:RUNNER_IP"
+      - name: Check NetAdapter
+        run: Get-NetAdapter
+          
